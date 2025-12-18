@@ -1,0 +1,207 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body.oscuro {
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255,255,255,0.22),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(0,0,0,0.95),
+      #040404 70%
+    ),
+    linear-gradient(
+      to bottom,
+      #0b0b0b,
+      #050505
+    );
+  color: #eaeaea;
+}
+body.claro {
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255,255,255,0.9),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom,
+      rgba(0,0,0,0.12),
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      #f1f1ed,
+      #d6d6d2
+    );
+  color: #1f1f1f;
+}
+body.oscuro #themeBtn {
+  background: #1b1b1b;
+  color: #ddd;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+body.claro #themeBtn {
+  background: #f2f2f0;
+  color: #1f1f1f;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+body.claro .item {
+  background: #f9f9f7;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+body.claro .texto {
+  color: #1f1f1f;
+  background-color: rgba(255, 255, 255, 0.7);
+   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+body.claro .descripcion {
+  color: #3a3a3a;
+}
+body.claro #img1:hover,
+body.claro #img2:hover,
+body.claro #img3:hover {
+  transform: translateY(-5px) scale(1.05);
+ box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
+}
+body.claro .title {
+  color: #1f1f1f;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.28),
+    0 6px 12px rgba(0, 0, 0, 0.18);
+}
+.title {
+  text-align: center;
+  color: #e5e5e5;
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 40px; /* esto separa el body */
+  font-family: 'Press Start 2P', Inter;
+}
+#titulo {
+  width: fit-content;  /* o un ancho fijo */
+  margin: 0 auto;      /* centra horizontalmente */
+}
+#themeBtn {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  padding: 6px 14px;
+  font-size: 13px;
+  background: #1b1b1b;
+  color: #ddd;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+#themeBtn:hover {
+  background: #242424;
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
+}
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start; /* 🔥 CLAVE */
+  flex: 1;
+  padding: 30px 20px;
+}
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 235px;
+  min-height: 320px; /* 🔥 AJUSTÁ ESTE VALOR */
+  padding: 15px;
+
+  background: #1b1b1b;
+  border-radius: 14px;
+}
+/* El link es el contenedor de referencia */
+.img-link {
+  position: relative;
+  display: inline-block;
+}
+.img-link:hover .texto {
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
+}
+/* Imagen */
+.item img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+/* Texto sobre la imagen, abajo */
+.texto {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e5e5e5;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 5px 10px;
+  border-radius: 5px;
+  pointer-events: none; /* no interfiere con el click */
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+.descripcion { 
+  text-align: justify;
+  font-size: 18px;
+  color: #ccc;
+  padding-top: 10px;
+}
+#img1 {
+  transition: 0.3s ease;
+}
+#img1:hover {
+  transform: translateY(-5px) scale(1.05);   /* se eleva y agranda */
+  box-shadow: 0 0 30px rgba(196, 192, 189, 0.8);  /* glow */
+}
+#img2 {
+  transition: 0.3s ease;
+}
+#img2:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(137, 176, 181, 0.8);
+}
+#img3 {
+  transition: 0.3s ease;
+}
+#img3:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 30px rgba(134, 112, 114, 0.8);
+}
+body,
+body * {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+
+  opacity: 0.85;
+  margin-top: auto;
+  background: transparent;
+}
