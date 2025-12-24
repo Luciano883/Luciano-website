@@ -39,3 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Estado inicial
   document.getElementById('escritos').classList.add('show');
 });
+
+const backBtn = document.getElementById("backBtn");
+
+if (backBtn) {
+  backBtn.addEventListener("click", () => {
+    if (history.length > 1) {
+      history.back();
+    } else {
+      window.location.href = "index.html";
+    }
+  });
+}
