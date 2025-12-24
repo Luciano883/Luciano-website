@@ -1,51 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>la Biblioteca de Lucis</title>
-<link rel="stylesheet" href="css/qvxdk.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Biblioteca de Lucis</title>
+  <link rel="stylesheet" href="css/qvxdk.css">
 </head>
+
 <body>
 <div class="app">
-<aside class="sidebar">
-<div class="logo">La Biblioteca de Lucis</div>
-<nav class="menu">
-<a class="active" href="#" data-target="escritos">Escritos</a>
-<a href="#" data-target="reflexiones">Reflexiones</a>
-</nav>
-</aside>
 
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">La Biblioteca de Lucis</div>
 
-<main class="main">
-<div class="top">
-<input class="search" placeholder="Buscar…" />
+    <nav class="menu" aria-label="Secciones">
+      <a href="#" class="active" data-target="escritos">Escritos</a>
+      <a href="#" data-target="reflexiones">Reflexiones</a>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Top bar -->
+    <div class="top">
+      <input
+        class="search"
+        type="search"
+        placeholder="Buscar…"
+        aria-label="Buscar textos"
+      />
+    </div>
+
+    <!-- Contenido -->
+    <section class="card">
+
+      <!-- Escritos -->
+      <div id="escritos" class="section">
+        <h3>Escritos</h3>
+        <div class="list">
+          <a class="item"
+             href="Escritos/el principe de vacio.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span>El príncipe de vacío</span>
+          </a>
+
+          <a class="item"
+             href="Escritos/la dualidad entre lo mortal y lo divino.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span>La dualidad entre lo mortal y lo divino</span>
+          </a>
+
+          <a class="item"
+             href="Escritos/Agrón un verdadero innombrable.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span>Ira divina</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Reflexiones -->
+      <div id="reflexiones" class="section" hidden>
+        <h3>Reflexiones</h3>
+        <div class="list">
+          <a class="item" href="#"><span>La vida</span></a>
+          <a class="item" href="#"><span>La religión</span></a>
+          <a class="item" href="#"><span>El valor</span></a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Botón volver -->
+    <button
+      class="back-float"
+      type="button"
+      onclick="history.back()"
+      aria-label="Volver a la página anterior">
+      ← Volver
+    </button>
+
+  </main>
 </div>
 
-
-<section class="card">
-<div id="escritos" class="section">
-<h3>Escritos</h3>
-<div class="list">
-<a class="item" href="Escritos/el principe de vacio.pdf"><span>el principe de vacio</span></a>
-<a class="item" href="Escritos/la dualidad entre lo mortal y lo divino.pdf"><span>la dualidad entre lo mortal y lo divino</span></a>
-<a class="item" href="Escritos/Agrón un verdadero innombrable.pdf"><span>Ira divina</span></a>
-</div>
-</div>
-
-
-<div id="reflexiones" class="section">
-<h3>Reflexiones</h3>
-<div class="list">
-<a class="item" href="#"><span>la vida</span></a>
-<a class="item" href="#"><span>la religion</span></a>
-<a class="item" href="#"><span>el valors</span></a>
-</div>
-</div>
-</section>
-<button class="back-float" onclick="history.back()">Volver</button>
-</main>
-</div>
-    <script src="js/Vwñpnyk.js"></script>
+<script src="js/Vwñpnyk.js"></script>
 </body>
 </html>
